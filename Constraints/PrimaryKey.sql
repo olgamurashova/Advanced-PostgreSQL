@@ -1,3 +1,6 @@
 ALTER TABLE attendees
 ADD PRIMARY KEY (id); 
 
+ALTER TABLE speakers
+ADD PRIMARY KEY (id);
+
