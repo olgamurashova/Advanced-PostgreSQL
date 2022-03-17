@@ -38,3 +38,10 @@ ALTER COLUMN session_timeslot DROP NOT NULL;
 UPDATE talks
 SET title = 'TBD'
 WHERE title IS NULL;
+
+UPDATE speakers
+SET organization = 'CA'
+WHERE organization is NULL;
+
+ALTER TABLE speakers
+ALTER COLUMN organization SET NOT NULL;
