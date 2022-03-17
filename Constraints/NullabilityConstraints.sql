@@ -22,7 +22,19 @@ years_in_role integer
 ALTER TABLE talks
 ALTER COLUMN session_timeslot SET NOT NULL;
 
-3. Removing contsraint:
+ALTER TABLE talks
+ALTER COLUMN title SET NOT NULL;
+
+ALTER TABLE speakers
+ALTER COLUMN name SET NOT NULL;
+
+3. Removing constraint:
 
 ALTER TABLE talks
 ALTER COLUMN session_timeslot DROP NOT NULL;
+
+4. Updating past values where constraint addition was rejected due to NULL values being present:
+
+UPDATE talks
+SET title = 'TBD'
+WHERE title IS NULL;
