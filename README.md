@@ -1,4 +1,4 @@
-## Advanced-PostgreSQL
+## Advanced PostgreSQL
 
 ### General information
 
